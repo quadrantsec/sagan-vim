@@ -14,19 +14,27 @@ hi SaganTopLevelJson ctermfg=196
 hi jsonNumber ctermfg=240
 hi jsonKeyword ctermfg=37
 hi jsonString ctermfg=247
+hi jsonCustom ctermfg=99 cterm=bold
+hi jsonCustom2 ctermfg=105
 
 syn match saganDisabledTrue "^.*disabled\":\s*true}.*$"
 
-syntax match saganTopLevelJson "\"name\""
-syntax match saganTopLevelJson "\"rules\""
-syntax match saganTopLevelJson "\"on_alert\""
+syntax match jsonCustom "\"custom\""
+syntax match jsonCustom2 "\"cust_id\""
+syntax match jsonCustom2 "\"action\""
+
+syntax match saganTopLevelJson "^\"name\""
+syntax match saganTopLevelJson "^\"rules\""
+syntax match saganTopLevelJson "^\"on_alert\""
+syntax match saganTopLevelJson "^\"cust_id\""
+syntax match saganTopLevelJson "^\"map\""
 
 syntax match saganLog "\"filters\""
 "syntax match saganLog "\"core\""
 syntax match saganLog "\"value\""
 syntax match saganLog "\"rate\""
 syntax match saganLog "\"correlation\""
-syntax match saganLog "\"external\""
+syntax match saganLog "\"threat\""
 
 syntax match saganLogFilters "\"equals\""
 syntax match saganLogFilters "\"contains\""
@@ -38,9 +46,9 @@ syntax match saganLogFilters "\"!contains\""
 syntax match saganLogFilters "\"!starts_with\""
 syntax match saganLogFilters "\"!ends_with\""
 syntax match saganLogFilters "\"!matches\""
-syntax match saganLogFilters "\"rate\""
-syntax match saganLogFilters "\"map\""
+"syntax match saganLogFilters "\"map\""
 syntax match saganLogFilters "\"country_code\""
+syntax match saganLogFilters "\"ip\""
 
 syntax match saganKeyword "\"field\""
 syntax match saganKeyword "\"fields\""
